@@ -17,6 +17,9 @@
   a { color: #0a58ca; }
   @media (prefers-color-scheme: dark) { a { color: #7ab8ff; } .meta { color: #aaa; } }
   footer { margin-top: 3rem; font-size: .9rem; color: #666; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .95rem; }
+  th, td { border: 1px solid #8884; padding: .5rem .6rem; text-align: left; vertical-align: top; }
+  th { font-weight: 600; }
 </style>
 </head>
 <body>
@@ -24,7 +27,13 @@
 <h1>Privacy Policy</h1>
 <p class="meta">Squeeeks · Last updated 24 August 2026</p>
 
-<p>Squeeeks is a cleaning-habit game. This policy explains what the app collects, why, and how to get it deleted. It applies to the Squeeeks iOS app.</p>
+<p>Squeeeks is a cleaning-habit game. This policy explains what the app collects, why, how long it is kept, and what you can ask us to do with it. It applies to the Squeeeks iOS app.</p>
+
+<!-- PLACEHOLDER — MUST BE REPLACED BEFORE PUBLISHING. See W4-122 §7.1. -->
+<h2>Who is responsible for your data</h2>
+<p>The data controller for Squeeeks is:</p>
+<p><strong>[[CONTROLLER-NAME-AND-ADDRESS]]</strong></p>
+<p>You can reach us about anything in this policy at <a href="mailto:bkbrohon795@gmail.com">bkbrohon795@gmail.com</a>.</p>
 
 <h2>What we collect</h2>
 <ul>
@@ -35,6 +44,18 @@
   <li><strong>Purchase history</strong> — records of in-app purchases and subscriptions. Payment card details are handled entirely by Apple and are never seen by us.</li>
   <li><strong>Crash reports</strong> — if the app crashes, a diagnostic report is sent to Google's Firebase Crashlytics so the fault can be found and fixed. The report contains the error, the point in the code it happened, the device model and the OS version, and a short trail of what you had just done in the app — for example <code>builder.opened</code> — recorded as plain event names with no details attached. Crash reports are <strong>not linked to your account</strong>: they identify an installation of the app, not you. They are not used for advertising, are never combined with data from anywhere else, and are not shared with anyone but Google, acting for us.</li>
 </ul>
+<p>We do not collect precise location, contacts, photos, health, biometric or demographic data. Your password is handled by Firebase Authentication when you sign in; we do not store it and cannot see it.</p>
+
+<h2>Why we use it, and our lawful basis</h2>
+<p>If you are in the UK or the European Economic Area, the UK GDPR and the EU GDPR require us to tell you the lawful basis for each use. They are:</p>
+<table>
+  <tr><th>What</th><th>Why we use it</th><th>Lawful basis</th></tr>
+  <tr><td>Account details, profile information, game data</td><td>To create your account, save your progress, and let you play with friends you have accepted</td><td><strong>Performance of a contract</strong> — this is the service you signed up for</td></tr>
+  <tr><td>Purchase history</td><td>To give you what you bought and to keep subscriptions working across your devices</td><td><strong>Performance of a contract</strong></td></tr>
+  <tr><td>Device token</td><td>To send the reminders you asked for</td><td><strong>Consent</strong> — you choose this at the notification prompt, and can withdraw it at any time in iOS Settings</td></tr>
+  <tr><td>Crash reports</td><td>To find and fix faults that make the app break</td><td><strong>Legitimate interests</strong> — keeping the app working for everyone. Crash reports are not linked to your account</td></tr>
+</table>
+<p>Providing your account details is a contractual requirement: without an email address and a user ID we cannot create an account, and you would not be able to save progress or use friend features. Nothing in the app requires you to give us data by law.</p>
 
 <h2>What we do not do</h2>
 <ul>
@@ -43,13 +64,68 @@
   <li>We do not collect your location, contacts, photos, or health data.</li>
 </ul>
 
+<h2>Automated decisions</h2>
+<p>We do not use your data to make automated decisions about you, and we do not build advertising or marketing profiles from it. Nothing in the app decides anything about you without a person involved, and no feature currently analyses your history to make inferences about you. If that ever changes, this policy will be updated before the feature is switched on.</p>
+
 <h2>Who can see your information</h2>
 <p>Your profile and house layout are visible only to friends you have accepted. Settings contains a <strong>Be discoverable</strong> toggle; turning it off makes your account unsearchable by display name.</p>
 <p>Data is stored using Google Firebase (Authentication, Cloud Firestore, Cloud Messaging, and Crashlytics), which processes it on our behalf. Apple processes in-app purchases.</p>
 
-<h2>Deleting your data</h2>
-<p>You can delete your account at any time from <strong>Settings → Account &amp; Data → Delete account</strong> inside the app. Deletion removes your account and associated game data and cannot be undone.</p>
-<p>You can also email us at the address below and we will delete your data on request.</p>
+<h2>Where your data is processed</h2>
+<p>Google processes Firebase data on servers in the United States. For users in the UK and the European Economic Area, that is a transfer outside your home country, and it needs a legal mechanism.</p>
+<p>Google states that it complies with the <strong>EU–U.S. and Swiss–U.S. Data Privacy Frameworks and the UK Extension</strong> to the EU–U.S. Data Privacy Framework, and additionally offers <strong>Standard Contractual Clauses</strong> through its Cloud Data Processing Addendum. Those are the mechanisms this transfer relies on.</p>
+<p>In the language of the GDPR and of California law, we are the <strong>controller</strong> (or <em>business</em>) and Google is our <strong>processor</strong> (or <em>service provider</em>). Google publishes this position itself at <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>.</p>
+
+<h2>How long we keep it</h2>
+<p>We do not set a fixed number of days. Instead:</p>
+<ul>
+  <li><strong>Your account, profile and game data</strong> are kept for as long as your account exists. When you delete your account, they are deleted with it.</li>
+  <li><strong>Purchase records</strong> are kept for as long as needed to honour an active entitlement or subscription, and to deal with refund and billing questions afterwards.</li>
+  <li><strong>Crash reports</strong> are held by Google Crashlytics under Google's own retention schedule, not ours. They are not linked to your account and are deleted on Google's cycle.</li>
+  <li><strong>Backups.</strong> After deletion, residual copies may persist for a limited period in Google's backup systems before they age out. That schedule is Google's and we do not control it — we cannot promise a number we are not in a position to enforce.</li>
+</ul>
+
+<h2>Your rights</h2>
+<p>Wherever you live, you can ask us to do the following, and we will not treat you any differently for asking:</p>
+<ul>
+  <li><strong>Access</strong> — get a copy of the personal data we hold about you.</li>
+  <li><strong>Rectification</strong> — have anything inaccurate corrected. You can change your avatar yourself in <strong>Settings</strong>; email us for anything else.</li>
+  <li><strong>Erasure</strong> — delete your account and its data. You can do this yourself at any time from <strong>Settings → Account &amp; Data → Delete account</strong>. Deletion removes your account and associated game data and cannot be undone.</li>
+  <li><strong>Portability</strong> — receive the data you gave us in a machine-readable form, or ask us to send it elsewhere. The app has no export button today, so email us and we will put the file together by hand.</li>
+  <li><strong>Restriction</strong> — ask us to pause what we do with your data while a question about it is being sorted out.</li>
+  <li><strong>Objection</strong> — object to our processing where we rely on legitimate interests, which for us means crash reporting.</li>
+  <li><strong>Withdraw consent</strong> — turn off notifications at any time in iOS Settings. Withdrawing does not affect anything done before you withdrew.</li>
+</ul>
+<p>Email <a href="mailto:bkbrohon795@gmail.com">bkbrohon795@gmail.com</a> to exercise any of these. We may need to confirm you control the account's email address before we act, so that nobody else can make a request about your data.</p>
+<p>If you are in the UK or the EEA and you think we have got this wrong, you have the right to <strong>complain to your data protection supervisory authority</strong>. In the UK that is the Information Commissioner's Office (<a href="https://ico.org.uk">ico.org.uk</a>); in the EEA it is the authority in the country where you live. You can complain without contacting us first, though we would rather have the chance to fix it.</p>
+
+<h2>If you are in California</h2>
+<p>The CCPA and CPRA give California residents specific rights and require us to describe our collection in the statute's own categories. In the last 12 months we have collected:</p>
+<table>
+  <tr><th>CCPA category</th><th>What that means here</th><th>Business purpose</th></tr>
+  <tr><td><strong>Identifiers</strong></td><td>Email address, user ID, display name, device push token</td><td>Creating and securing your account; sending reminders you asked for</td></tr>
+  <tr><td><strong>Commercial information</strong></td><td>Records of in-app purchases and subscriptions</td><td>Delivering what you bought; supporting refunds and billing questions</td></tr>
+  <tr><td><strong>Internet or other electronic network activity information</strong></td><td>Crash diagnostics: the error, device model, OS version, and recent in-app event names</td><td>Finding and fixing faults</td></tr>
+  <tr><td><strong>Other information you create in the app</strong></td><td>Tasks, streaks, house layout, in-game currency, friend connections</td><td>Running the game and saving your progress</td></tr>
+</table>
+<p>We disclose these categories to two kinds of third party for those business purposes: <strong>Google</strong> (Firebase Authentication, Cloud Firestore, Cloud Messaging and Crashlytics) and <strong>Apple</strong> (in-app purchases). Both act as service providers.</p>
+<p>We <strong>do not sell</strong> your personal information and we <strong>do not share</strong> it for cross-context behavioural advertising, as those terms are defined by California law. We never have. Because we do not sell or share, there is nothing for you to opt out of — but the rest of your rights still apply: the right to <strong>know</strong> what we collect, to <strong>delete</strong> it, to <strong>correct</strong> it, and to <strong>not be discriminated against</strong> for exercising any of them. We do not offer financial incentives in exchange for personal information.</p>
+<p>We do not collect sensitive personal information as the CPRA defines it — no precise geolocation, government identifiers, racial or ethnic origin, religious beliefs, health data, biometrics, or the contents of your messages. We do not use or disclose sensitive personal information for purposes requiring a right-to-limit notice.</p>
+<p>You can make any of these requests at <a href="mailto:bkbrohon795@gmail.com">bkbrohon795@gmail.com</a>. An authorised agent may make a request on your behalf, and we will ask for proof that you authorised them.</p>
+
+<h2>How we protect your data</h2>
+<p>We would rather describe what actually exists than make claims we cannot stand behind:</p>
+<ul>
+  <li>Access to your data is controlled by <strong>server-side security rules</strong>, so what your device is allowed to read and write is enforced on the server rather than trusted from the app.</li>
+  <li>Accounts are <strong>authenticated through Firebase Authentication</strong>. We never see or store your password.</li>
+  <li>All traffic between the app and our services runs over <strong>encrypted connections (TLS)</strong>.</li>
+  <li><strong>No card data ever reaches us.</strong> Apple handles payment entirely.</li>
+  <li>Storage and infrastructure security is Google's, under the Firebase terms.</li>
+</ul>
+<p>No service can promise perfect security, and we are not going to pretend otherwise.</p>
+
+<h2>If something goes wrong</h2>
+<p>If a breach of personal data happens and it is likely to be a risk to your rights and freedoms, we will report it to the relevant supervisory authority <strong>without undue delay, and within 72 hours of becoming aware of it</strong> where the GDPR requires that. If the risk to you is high, we will tell you directly as well, without undue delay. Where other laws set their own notification duties, we will follow those too.</p>
 
 <h2>Children</h2>
 <p>Squeeeks is a family game, rated for younger players, and children may play it. It is not an App Store Kids Category app. It is not directed at children under 13 within the meaning of the US Children's Online Privacy Protection Act, and we do not knowingly collect personal information from a child beyond the account details, profile information and game data described above — none of which is ever used for advertising or tracking. A parent or guardian can delete an account and all of its data at any time from <strong>Settings → Account &amp; Data → Delete account</strong>, or by contacting us at the address below.</p>
