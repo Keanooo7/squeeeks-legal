@@ -25,7 +25,12 @@
 <body>
 
 <h1>Privacy Policy</h1>
-<p class="meta">Squeeeks · Last updated 24 August 2026</p>
+<p class="meta">Squeeeks · Last updated 8 October 2026</p>
+
+<!-- PUBLISH GATE (W4-166): this text describes three features that are being built in parallel —
+     the 13+ year-of-birth step (W1-267), report and block (W2-203 + W1-266), and bundled fonts
+     (W1-267). Publish only once the build that ships them is the one in review. If the fonts are
+     NOT bundled in that build, keep the "Fonts" paragraph below; if they are, delete it. -->
 
 <p>Squeeeks is a cleaning-habit game. This policy explains what the app collects, why, how long it is kept, and what you can ask us to do with it. It applies to the Squeeeks iOS app.</p>
 
@@ -38,19 +43,27 @@
 <h2>What we collect</h2>
 <ul>
   <li><strong>Account details</strong> — your email address and a user ID, created when you sign up.</li>
+  <li><strong>Sign in with Apple</strong> — if you choose it, Apple gives us a user identifier and an email address. If you pick <em>Hide My Email</em>, that address is an Apple relay address and we never see your real one. We do not receive your Apple ID password.</li>
+  <li><strong>Your age, checked once and not kept</strong> — when you create an account we ask for your year of birth only to confirm you are 13 or older. We do not store your year of birth, your date of birth or your age.</li>
   <li><strong>Profile information</strong> — the display name and avatar you choose.</li>
   <li><strong>Game data</strong> — your cleaning tasks, streaks, house layout, in-game currency, and friend connections.</li>
+  <li><strong>Family chat and household data</strong> — if you create or join a family, the messages you post in its chat (the text, who sent it and when), the chores assigned within it, and who belongs to it. Messages are checked by an automatic word filter before they are posted.</li>
+  <li><strong>Reports and blocks</strong> — if you report a message or a player, we keep the report (who reported what, the reason you chose, and when) so we can review it. If you block someone, we keep the block so it can be enforced.</li>
   <li><strong>Device token</strong> — if you allow notifications, a push token so reminders can reach your device.</li>
   <li><strong>Purchase history</strong> — records of in-app purchases and subscriptions. Payment card details are handled entirely by Apple and are never seen by us.</li>
   <li><strong>Crash reports</strong> — if the app crashes, a diagnostic report is sent to Google's Firebase Crashlytics so the fault can be found and fixed. The report contains the error, the point in the code it happened, the device model and the OS version, and a short trail of what you had just done in the app — for example <code>builder.opened</code> — recorded as plain event names with no details attached. Crash reports are <strong>not linked to your account</strong>: they identify an installation of the app, not you. They are not used for advertising, are never combined with data from anywhere else, and are not shared with anyone but Google, acting for us.</li>
 </ul>
-<p>We do not collect precise location, contacts, photos, health, biometric or demographic data. Your password is handled by Firebase Authentication when you sign in; we do not store it and cannot see it.</p>
+<p>We do not collect precise location, contacts, health, biometric or demographic data. If you take an optional photo of a room you have cleaned, it stays on your device and is never uploaded. Your password is handled by Firebase Authentication when you sign in; we do not store it and cannot see it.</p>
+<p><strong>Fonts.</strong> The app downloads its two typefaces (Fredoka and Nunito) from Google Fonts the first time they are needed. That request goes from your device to Google's servers, so Google receives your device's IP address and the usual technical details of a web request. No account information is sent with it.</p>
 
 <h2>Why we use it, and our lawful basis</h2>
 <p>If you are in the UK or the European Economic Area, the UK GDPR and the EU GDPR require us to tell you the lawful basis for each use. They are:</p>
 <table>
   <tr><th>What</th><th>Why we use it</th><th>Lawful basis</th></tr>
   <tr><td>Account details, profile information, game data</td><td>To create your account, save your progress, and let you play with friends you have accepted</td><td><strong>Performance of a contract</strong> — this is the service you signed up for</td></tr>
+  <tr><td>Family chat and household data</td><td>To deliver your messages and chores to the members of your family</td><td><strong>Performance of a contract</strong></td></tr>
+  <tr><td>Reports and blocks</td><td>To review reports of abuse, enforce blocks and keep other players safe</td><td><strong>Legitimate interests</strong> — keeping the community safe, which App Store rules also require</td></tr>
+  <tr><td>Year of birth (not stored)</td><td>To confirm you are old enough to create an account</td><td><strong>Legitimate interests</strong> and our legal obligations towards children</td></tr>
   <tr><td>Purchase history</td><td>To give you what you bought and to keep subscriptions working across your devices</td><td><strong>Performance of a contract</strong></td></tr>
   <tr><td>Device token</td><td>To send the reminders you asked for</td><td><strong>Consent</strong> — you choose this at the notification prompt, and can withdraw it at any time in iOS Settings</td></tr>
   <tr><td>Crash reports</td><td>To find and fix faults that make the app break</td><td><strong>Legitimate interests</strong> — keeping the app working for everyone. Crash reports are not linked to your account</td></tr>
@@ -69,7 +82,9 @@
 
 <h2>Who can see your information</h2>
 <p>Your profile and house layout are visible only to friends you have accepted. Settings contains a <strong>Be discoverable</strong> toggle; turning it off makes your account unsearchable by display name.</p>
-<p>Data is stored using Google Firebase (Authentication, Cloud Firestore, Cloud Messaging, and Crashlytics), which processes it on our behalf. Apple processes in-app purchases.</p>
+<p>If you join a family, its members can see your display name and avatar, the messages you post in the family chat, and the chores assigned within it. People outside the family cannot.</p>
+<p>You can <strong>report</strong> a message or a player, and <strong>block</strong> a player, from inside the app. A blocked player can no longer send you a friend request, a gift or a family message, and no longer appears in your searches. Reports are read by us and are not shown to the person you reported.</p>
+<p>Data is stored using Google Firebase (Authentication, Cloud Firestore, Cloud Functions, Cloud Messaging, and Crashlytics), which processes it on our behalf. Apple processes in-app purchases and, if you use it, Sign in with Apple. Google Fonts serves the app's typefaces, as described above.</p>
 
 <h2>Where your data is processed</h2>
 <p>Google processes Firebase data on servers in the United States. For users in the UK and the European Economic Area, that is a transfer outside your home country, and it needs a legal mechanism.</p>
@@ -80,6 +95,8 @@
 <p>We do not set a fixed number of days. Instead:</p>
 <ul>
   <li><strong>Your account, profile and game data</strong> are kept for as long as your account exists. When you delete your account, they are deleted with it.</li>
+  <li><strong>Family chat messages</strong> stay in the family's chat while the family exists. When you delete your account, the messages you sent are deleted too.</li>
+  <li><strong>Reports</strong> are kept for as long as we need them to deal with the report and with any repeat behaviour by the same account.</li>
   <li><strong>Purchase records</strong> are kept for as long as needed to honour an active entitlement or subscription, and to deal with refund and billing questions afterwards.</li>
   <li><strong>Crash reports</strong> are held by Google Crashlytics under Google's own retention schedule, not ours. They are not linked to your account and are deleted on Google's cycle.</li>
   <li><strong>Backups.</strong> After deletion, residual copies may persist for a limited period in Google's backup systems before they age out. That schedule is Google's and we do not control it — we cannot promise a number we are not in a position to enforce.</li>
@@ -106,11 +123,11 @@
   <tr><td><strong>Identifiers</strong></td><td>Email address, user ID, display name, device push token</td><td>Creating and securing your account; sending reminders you asked for</td></tr>
   <tr><td><strong>Commercial information</strong></td><td>Records of in-app purchases and subscriptions</td><td>Delivering what you bought; supporting refunds and billing questions</td></tr>
   <tr><td><strong>Internet or other electronic network activity information</strong></td><td>Crash diagnostics: the error, device model, OS version, and recent in-app event names</td><td>Finding and fixing faults</td></tr>
-  <tr><td><strong>Other information you create in the app</strong></td><td>Tasks, streaks, house layout, in-game currency, friend connections</td><td>Running the game and saving your progress</td></tr>
+  <tr><td><strong>Other information you create in the app</strong></td><td>Tasks, streaks, house layout, in-game currency, friend connections, family chat messages, reports you make</td><td>Running the game, saving your progress, delivering messages to your family, keeping players safe</td></tr>
 </table>
-<p>We disclose these categories to two kinds of third party for those business purposes: <strong>Google</strong> (Firebase Authentication, Cloud Firestore, Cloud Messaging and Crashlytics) and <strong>Apple</strong> (in-app purchases). Both act as service providers.</p>
+<p>We disclose these categories to two kinds of third party for those business purposes: <strong>Google</strong> (Firebase Authentication, Cloud Firestore, Cloud Functions, Cloud Messaging and Crashlytics, plus Google Fonts for the app's typefaces) and <strong>Apple</strong> (in-app purchases and Sign in with Apple). Both act as service providers.</p>
 <p>We <strong>do not sell</strong> your personal information and we <strong>do not share</strong> it for cross-context behavioural advertising, as those terms are defined by California law. We never have. Because we do not sell or share, there is nothing for you to opt out of — but the rest of your rights still apply: the right to <strong>know</strong> what we collect, to <strong>delete</strong> it, to <strong>correct</strong> it, and to <strong>not be discriminated against</strong> for exercising any of them. We do not offer financial incentives in exchange for personal information.</p>
-<p>We do not collect sensitive personal information as the CPRA defines it — no precise geolocation, government identifiers, racial or ethnic origin, religious beliefs, health data, biometrics, or the contents of your messages. We do not use or disclose sensitive personal information for purposes requiring a right-to-limit notice.</p>
+<p>The one kind of sensitive personal information, as the CPRA defines it, that we hold is the <strong>content of the messages you post in a family chat</strong>. We store it only so that the members of your family can read it, and we use it for nothing else. We do not collect precise geolocation, government identifiers, racial or ethnic origin, religious beliefs, health data or biometrics. We do not use or disclose sensitive personal information for any purpose that would require a right-to-limit notice.</p>
 <p>You can make any of these requests at <a href="mailto:bkbrohon795@gmail.com">bkbrohon795@gmail.com</a>. An authorised agent may make a request on your behalf, and we will ask for proof that you authorised them.</p>
 
 <h2>How we protect your data</h2>
@@ -128,7 +145,8 @@
 <p>If a breach of personal data happens and it is likely to be a risk to your rights and freedoms, we will report it to the relevant supervisory authority <strong>without undue delay, and within 72 hours of becoming aware of it</strong> where the GDPR requires that. If the risk to you is high, we will tell you directly as well, without undue delay. Where other laws set their own notification duties, we will follow those too.</p>
 
 <h2>Children</h2>
-<p>Squeeeks is a family game, rated for younger players, and children may play it. It is not an App Store Kids Category app. It is not directed at children under 13 within the meaning of the US Children's Online Privacy Protection Act, and we do not knowingly collect personal information from a child beyond the account details, profile information and game data described above — none of which is ever used for advertising or tracking. A parent or guardian can delete an account and all of its data at any time from <strong>Settings → Account &amp; Data → Delete account</strong>, or by contacting us at the address below.</p>
+<p>Squeeeks is for people <strong>aged 13 and over</strong>. It is not an App Store Kids Category app and it is not directed at children under 13. When you create an account, the app asks for your year of birth and does not let you continue if you are under 13. We do not store the year you enter or your age.</p>
+<p>We do not knowingly collect personal information from children under 13. If we learn that an account belongs to a child under 13, we will delete it and its data. If you are a parent or guardian and think your child has an account, email us at the address below and we will delete it. Anyone can also delete an account and all of its data at any time from <strong>Settings → Account &amp; Data → Delete account</strong>.</p>
 
 <h2>Changes</h2>
 <p>If this policy changes materially, the updated version will be posted on this page with a new date.</p>
