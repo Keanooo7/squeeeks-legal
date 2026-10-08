@@ -29,8 +29,10 @@
 
 <!-- PUBLISH GATE (W4-166): this text describes three features that are being built in parallel —
      the 13+ year-of-birth step (W1-267), report and block (W2-203 + W1-266), and bundled fonts
-     (W1-267). Publish only once the build that ships them is the one in review. If the fonts are
-     NOT bundled in that build, keep the "Fonts" paragraph below; if they are, delete it. -->
+     (W1-267). Publish only once the build that ships them is the one in review. The "Fonts"
+     paragraph was removed for #893, which bundles Fredoka, Nunito and Plus Jakarta Sans and sets
+     GoogleFonts.config.allowRuntimeFetching = false. If the build in review does NOT contain #893,
+     restore it from git history. -->
 
 <p>Squeeeks is a cleaning-habit game. This policy explains what the app collects, why, how long it is kept, and what you can ask us to do with it. It applies to the Squeeeks iOS app.</p>
 
@@ -54,7 +56,6 @@
   <li><strong>Crash reports</strong> — if the app crashes, a diagnostic report is sent to Google's Firebase Crashlytics so the fault can be found and fixed. The report contains the error, the point in the code it happened, the device model and the OS version, and a short trail of what you had just done in the app — for example <code>builder.opened</code> — recorded as plain event names with no details attached. Crash reports are <strong>not linked to your account</strong>: they identify an installation of the app, not you. They are not used for advertising, are never combined with data from anywhere else, and are not shared with anyone but Google, acting for us.</li>
 </ul>
 <p>We do not collect precise location, contacts, health, biometric or demographic data. If you take an optional photo of a room you have cleaned, it stays on your device and is never uploaded. Your password is handled by Firebase Authentication when you sign in; we do not store it and cannot see it.</p>
-<p><strong>Fonts.</strong> The app downloads its two typefaces (Fredoka and Nunito) from Google Fonts the first time they are needed. That request goes from your device to Google's servers, so Google receives your device's IP address and the usual technical details of a web request. No account information is sent with it.</p>
 
 <h2>Why we use it, and our lawful basis</h2>
 <p>If you are in the UK or the European Economic Area, the UK GDPR and the EU GDPR require us to tell you the lawful basis for each use. They are:</p>
@@ -84,7 +85,7 @@
 <p>Your profile and house layout are visible only to friends you have accepted. Settings contains a <strong>Be discoverable</strong> toggle; turning it off makes your account unsearchable by display name.</p>
 <p>If you join a family, its members can see your display name and avatar, the messages you post in the family chat, and the chores assigned within it. People outside the family cannot.</p>
 <p>You can <strong>report</strong> a message or a player, and <strong>block</strong> a player, from inside the app. A blocked player can no longer send you a friend request, a gift or a family message, and no longer appears in your searches. Reports are read by us and are not shown to the person you reported.</p>
-<p>Data is stored using Google Firebase (Authentication, Cloud Firestore, Cloud Functions, Cloud Messaging, and Crashlytics), which processes it on our behalf. Apple processes in-app purchases and, if you use it, Sign in with Apple. Google Fonts serves the app's typefaces, as described above.</p>
+<p>Data is stored using Google Firebase (Authentication, Cloud Firestore, Cloud Functions, Cloud Messaging, and Crashlytics), which processes it on our behalf. Apple processes in-app purchases and, if you use it, Sign in with Apple.</p>
 
 <h2>Where your data is processed</h2>
 <p>Google processes Firebase data on servers in the United States. For users in the UK and the European Economic Area, that is a transfer outside your home country, and it needs a legal mechanism.</p>
@@ -125,7 +126,7 @@
   <tr><td><strong>Internet or other electronic network activity information</strong></td><td>Crash diagnostics: the error, device model, OS version, and recent in-app event names</td><td>Finding and fixing faults</td></tr>
   <tr><td><strong>Other information you create in the app</strong></td><td>Tasks, streaks, house layout, in-game currency, friend connections, family chat messages, reports you make</td><td>Running the game, saving your progress, delivering messages to your family, keeping players safe</td></tr>
 </table>
-<p>We disclose these categories to two kinds of third party for those business purposes: <strong>Google</strong> (Firebase Authentication, Cloud Firestore, Cloud Functions, Cloud Messaging and Crashlytics, plus Google Fonts for the app's typefaces) and <strong>Apple</strong> (in-app purchases and Sign in with Apple). Both act as service providers.</p>
+<p>We disclose these categories to two kinds of third party for those business purposes: <strong>Google</strong> (Firebase Authentication, Cloud Firestore, Cloud Functions, Cloud Messaging and Crashlytics) and <strong>Apple</strong> (in-app purchases and Sign in with Apple). Both act as service providers.</p>
 <p>We <strong>do not sell</strong> your personal information and we <strong>do not share</strong> it for cross-context behavioural advertising, as those terms are defined by California law. We never have. Because we do not sell or share, there is nothing for you to opt out of — but the rest of your rights still apply: the right to <strong>know</strong> what we collect, to <strong>delete</strong> it, to <strong>correct</strong> it, and to <strong>not be discriminated against</strong> for exercising any of them. We do not offer financial incentives in exchange for personal information.</p>
 <p>The one kind of sensitive personal information, as the CPRA defines it, that we hold is the <strong>content of the messages you post in a family chat</strong>. We store it only so that the members of your family can read it, and we use it for nothing else. We do not collect precise geolocation, government identifiers, racial or ethnic origin, religious beliefs, health data or biometrics. We do not use or disclose sensitive personal information for any purpose that would require a right-to-limit notice.</p>
 <p>You can make any of these requests at <a href="mailto:bkbrohon795@gmail.com">bkbrohon795@gmail.com</a>. An authorised agent may make a request on your behalf, and we will ask for proof that you authorised them.</p>
