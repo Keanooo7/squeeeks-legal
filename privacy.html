@@ -49,8 +49,8 @@
   <li><strong>Your age, checked once and not kept</strong> — when you create an account we ask for your year of birth only to confirm you are 13 or older. We do not store your year of birth, your date of birth or your age.</li>
   <li><strong>Profile information</strong> — the display name and avatar you choose.</li>
   <li><strong>Game data</strong> — your cleaning tasks, streaks, house layout, in-game currency, and friend connections.</li>
-  <li><strong>Family chat and household data</strong> — if you create or join a family, the messages you post in its chat (the text, who sent it and when), the chores assigned within it, and who belongs to it. Messages are checked by an automatic word filter before they are posted.</li>
-  <li><strong>Reports and blocks</strong> — if you report a message or a player, we keep the report (who reported what, the reason you chose, and when) so we can review it. If you block someone, we keep the block so it can be enforced.</li>
+  <li><strong>Family and household data</strong>: if you create or join a family, we keep who belongs to it, its name, the chores assigned within it, the week plans set for its members, when each chore was finished, and the kudos and stickers members give on those chores. Families have no typed chat. A reaction is one of a fixed set of kudos and stickers, so nothing you type is sent to your family.</li>
+  <li><strong>Reports and blocks</strong> — if you report a player, we keep the report (who reported what, the reason you chose, and when) so we can review it. If you block someone, we keep the block so it can be enforced.</li>
   <li><strong>Plants</strong> — if you use Plants: each plant you add (the species you pick from our list, the nickname you give it, and the room it is in), how often it needs water, when it was last watered and by which player, and whether you want plant reminders. We do not take or store photos of your plants.</li>
   <li><strong>Device token</strong> — if you allow notifications, a push token so reminders can reach your device.</li>
   <li><strong>Purchase history</strong> — records of in-app purchases and subscriptions. Payment card details are handled entirely by Apple and are never seen by us.</li>
@@ -63,7 +63,7 @@
 <table>
   <tr><th>What</th><th>Why we use it</th><th>Lawful basis</th></tr>
   <tr><td>Account details, profile information, game data</td><td>To create your account, save your progress, and let you play with friends you have accepted</td><td><strong>Performance of a contract</strong> — this is the service you signed up for</td></tr>
-  <tr><td>Family chat and household data</td><td>To deliver your messages and chores to the members of your family</td><td><strong>Performance of a contract</strong></td></tr>
+  <tr><td>Family and household data</td><td>To show your family's chores, week plans, kudos and stickers to its members</td><td><strong>Performance of a contract</strong></td></tr>
   <tr><td>Reports and blocks</td><td>To review reports of abuse, enforce blocks and keep other players safe</td><td><strong>Legitimate interests</strong> — keeping the community safe, which App Store rules also require</td></tr>
   <tr><td>Year of birth (not stored)</td><td>To confirm you are old enough to create an account</td><td><strong>Legitimate interests</strong> and our legal obligations towards children</td></tr>
   <tr><td>Purchase history</td><td>To give you what you bought and to keep subscriptions working across your devices</td><td><strong>Performance of a contract</strong></td></tr>
@@ -85,9 +85,9 @@
 
 <h2>Who can see your information</h2>
 <p>Your profile and house layout are visible only to friends you have accepted. Settings contains a <strong>Be discoverable</strong> toggle; turning it off makes your account unsearchable by display name.</p>
-<p>If you join a family, its members can see your display name and avatar, the messages you post in the family chat, and the chores assigned within it. People outside the family cannot.</p>
+<p>If you join a family, its members can see your display name and avatar, the chores assigned to you and when you finish them, and the kudos and stickers you give. People outside the family cannot.</p>
 <p><strong>Your plants are visible only to you</strong> until you share them. A plant you share with your family, and its watering history (who watered it and when), can be seen by every member of that family, any member can water it, and it can appear in their plant reminders. Leaving or being removed from a family brings the plants you shared back to your own list.</p>
-<p>You can <strong>report</strong> a message or a player, and <strong>block</strong> a player, from inside the app. A blocked player can no longer send you a friend request, a gift or a family message, and no longer appears in your searches. Reports are read by us and are not shown to the person you reported.</p>
+<p>You can <strong>report</strong> a player, and <strong>block</strong> a player, from inside the app. A blocked player can no longer send you a friend request or a gift, and no longer appears in your searches. If you block someone in your family, their activity is hidden from you. Reports are read by us and are not shown to the person you reported.</p>
 <p>Data is stored using Google Firebase (Authentication, Cloud Firestore, Cloud Functions, Cloud Messaging, and Crashlytics), which processes it on our behalf. Apple processes in-app purchases and, if you use it, Sign in with Apple.</p>
 
 <h2>Where your data is processed</h2>
@@ -100,7 +100,7 @@
 <ul>
   <li><strong>Your account, profile and game data</strong> are kept for as long as your account exists. When you delete your account, they are deleted with it.</li>
   <li><strong>Plants</strong> on your own list are deleted with your account. Plants you have shared with a family stay on that family's list, because the household still looks after them, until the family is disbanded. They are then deleted, as nobody remains to return them to.</li>
-  <li><strong>Family chat messages</strong> stay in the family's chat while the family exists. When you delete your account, the messages you sent are deleted too.</li>
+  <li><strong>Family chores, kudos and stickers</strong> stay with the family while it exists. When you delete your account, the chores assigned to you are deleted.</li>
   <li><strong>Reports</strong> are kept for as long as we need them to deal with the report and with any repeat behaviour by the same account.</li>
   <li><strong>Purchase records</strong> are kept for as long as needed to honour an active entitlement or subscription, and to deal with refund and billing questions afterwards.</li>
   <li><strong>Crash reports</strong> are held by Google Crashlytics under Google's own retention schedule, not ours. They are not linked to your account and are deleted on Google's cycle.</li>
@@ -128,11 +128,11 @@
   <tr><td><strong>Identifiers</strong></td><td>Email address, user ID, display name, device push token</td><td>Creating and securing your account; sending reminders you asked for</td></tr>
   <tr><td><strong>Commercial information</strong></td><td>Records of in-app purchases and subscriptions</td><td>Delivering what you bought; supporting refunds and billing questions</td></tr>
   <tr><td><strong>Internet or other electronic network activity information</strong></td><td>Crash diagnostics: the error, device model, OS version, and recent in-app event names</td><td>Finding and fixing faults</td></tr>
-  <tr><td><strong>Other information you create in the app</strong></td><td>Tasks, streaks, house layout, in-game currency, friend connections, family chat messages, reports you make</td><td>Running the game, saving your progress, delivering messages to your family, keeping players safe</td></tr>
+  <tr><td><strong>Other information you create in the app</strong></td><td>Tasks, streaks, house layout, in-game currency, friend connections, family chores, kudos and stickers, reports you make</td><td>Running the game, saving your progress, showing your family's chores to its members, keeping players safe</td></tr>
 </table>
 <p>We disclose these categories to two kinds of third party for those business purposes: <strong>Google</strong> (Firebase Authentication, Cloud Firestore, Cloud Functions, Cloud Messaging and Crashlytics) and <strong>Apple</strong> (in-app purchases and Sign in with Apple). Both act as service providers.</p>
 <p>We <strong>do not sell</strong> your personal information and we <strong>do not share</strong> it for cross-context behavioural advertising, as those terms are defined by California law. We never have. Because we do not sell or share, there is nothing for you to opt out of — but the rest of your rights still apply: the right to <strong>know</strong> what we collect, to <strong>delete</strong> it, to <strong>correct</strong> it, and to <strong>not be discriminated against</strong> for exercising any of them. We do not offer financial incentives in exchange for personal information.</p>
-<p>The one kind of sensitive personal information, as the CPRA defines it, that we hold is the <strong>content of the messages you post in a family chat</strong>. We store it only so that the members of your family can read it, and we use it for nothing else. We do not collect precise geolocation, government identifiers, racial or ethnic origin, religious beliefs, health data or biometrics. We do not use or disclose sensitive personal information for any purpose that would require a right-to-limit notice.</p>
+<p>We do not hold the content of private messages: families have no typed chat. We do not collect precise geolocation, government identifiers, racial or ethnic origin, religious beliefs, health data or biometrics. We do not use or disclose sensitive personal information for any purpose that would require a right-to-limit notice.</p>
 <p>You can make any of these requests at <a href="mailto:bkbrohon795@gmail.com">bkbrohon795@gmail.com</a>. An authorised agent may make a request on your behalf, and we will ask for proof that you authorised them.</p>
 
 <h2>How we protect your data</h2>
