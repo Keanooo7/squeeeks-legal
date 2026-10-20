@@ -25,114 +25,124 @@
 <body>
 
 <h1>Privacy Policy</h1>
-<p class="meta">Squeeeks · Last updated 19 October 2026</p>
+<p class="meta">Squeeeks · Last updated 20 October 2026 · Effective 20 October 2026</p>
 
-<!-- PUBLISH GATE (W4-166): this text describes three features that are being built in parallel —
-     the 13+ year-of-birth step (W1-267), report and block (W2-203 + W1-266), and bundled fonts
-     (W1-267). Publish only once the build that ships them is the one in review. The "Fonts"
-     paragraph was removed for #893, which bundles Fredoka, Nunito and Plus Jakarta Sans and sets
-     GoogleFonts.config.allowRuntimeFetching = false. If the build in review does NOT contain #893,
-     restore it from git history. -->
+<!-- PUBLISH GATE: this text describes families as PR #988 builds them (no typed chat, kudos and
+     stickers, week plans). Build 1.0 (12) still has a typed family chat. Publish only once the
+     build that ships #988 is the one players have. Before publishing, #988 must also delete a
+     player's week plan (families/{id}/weekPlans/{uid}) when they delete their account, because
+     "How long we keep it" says it is deleted. The "Fonts" paragraph was removed for #893, which
+     bundles the fonts and turns runtime fetching off; restore it from git history if a build in
+     players' hands does not contain #893. -->
 
 <p>Squeeeks is a cleaning-habit game. This policy explains what the app collects, why, how long it is kept, and what you can ask us to do with it. It applies to the Squeeeks iOS app, and to the squeeeks.app website and its early-access list, which have <a href="#website">their own section below</a>.</p>
 
-<!-- PLACEHOLDER — MUST BE REPLACED BEFORE PUBLISHING. See W4-122 §7.1. -->
 <h2>Who is responsible for your data</h2>
 <p>The data controller for Squeeeks is:</p>
 <p><strong>Brendan Trey Keane (independent developer), bkbrohon795@gmail.com</strong></p>
-<p>You can reach us about anything in this policy at <a href="mailto:bkbrohon795@gmail.com">bkbrohon795@gmail.com</a>.</p>
+<p>You can reach us about anything in this policy at <a href="mailto:bkbrohon795@gmail.com">bkbrohon795@gmail.com</a>. We have not appointed a data protection officer, because the law does not require one for a service of this size.</p>
 
 <h2>What we collect</h2>
 <ul>
-  <li><strong>Account details</strong> — your email address and a user ID, created when you sign up.</li>
-  <li><strong>Sign in with Apple</strong> — if you choose it, Apple gives us a user identifier and an email address. If you pick <em>Hide My Email</em>, that address is an Apple relay address and we never see your real one. We do not receive your Apple ID password.</li>
-  <li><strong>Your age, checked once and not kept</strong> — when you create an account we ask for your year of birth only to confirm you are 13 or older. We do not store your year of birth, your date of birth or your age.</li>
-  <li><strong>Profile information</strong> — the display name and avatar you choose.</li>
-  <li><strong>Game data</strong> — your cleaning tasks, streaks, house layout, in-game currency, and friend connections.</li>
-  <li><strong>Family and household data</strong>: if you create or join a family, we keep who belongs to it, its name, the chores assigned within it, the week plans set for its members, when each chore was finished, and the kudos and stickers members give on those chores. Families have no typed chat. A reaction is one of a fixed set of kudos and stickers, so nothing you type is sent to your family.</li>
-  <li><strong>Reports and blocks</strong> — if you report a player, we keep the report (who reported what, the reason you chose, and when) so we can review it. If you block someone, we keep the block so it can be enforced.</li>
-  <li><strong>Plants</strong> — if you use Plants: each plant you add (the species you pick from our list, the nickname you give it, and the room it is in), how often it needs water, when it was last watered and by which player, and whether you want plant reminders. We do not take or store photos of your plants.</li>
-  <li><strong>Device token</strong> — if you allow notifications, a push token so reminders can reach your device.</li>
-  <li><strong>Purchase history</strong> — records of in-app purchases and subscriptions. Payment card details are handled entirely by Apple and are never seen by us.</li>
-  <li><strong>Crash reports</strong> — if the app crashes, a diagnostic report is sent to Google's Firebase Crashlytics so the fault can be found and fixed. The report contains the error, the point in the code it happened, the device model and the OS version, and a short trail of what you had just done in the app — for example <code>builder.opened</code> — recorded as plain event names with no details attached. Crash reports are <strong>not linked to your account</strong>: they identify an installation of the app, not you. They are not used for advertising, are never combined with data from anywhere else, and are not shared with anyone but Google, acting for us.</li>
+  <li><strong>Account details</strong>: your email address and a user ID, created when you sign up.</li>
+  <li><strong>Sign in with Apple</strong>: if you choose it, Apple gives us a user identifier, an email address and, if you agree to share it, your name, which becomes your starting display name. If you pick <em>Hide My Email</em>, that address is an Apple relay address and we never see your real one. We do not receive your Apple ID password.</li>
+  <li><strong>Your age, checked once and not kept</strong>: when you create an account we ask for your year of birth only to confirm you are 13 or older. We do not store your year of birth, your date of birth or your age. We keep only a note on your account that the check was passed. If the check is not passed, your device remembers that, so the check cannot simply be retried.</li>
+  <li><strong>Profile information</strong>: the display name and avatar you choose, and your cleanliness score.</li>
+  <li><strong>Game data</strong>: your cleaning tasks and when you finish them, streaks, quests, scores, house layout, outfits, in-game currency, items, gifts, friend connections, and the friends you have invited into your house.</li>
+  <li><strong>Household tools</strong>: if you use them, the custom chores you create (including the titles you type), notes you add to tasks, fridge items and their dates, your bin day and laundry timers.</li>
+  <li><strong>Family and household data</strong>: if you create or join a family, we keep who belongs to it, its name, the chores assigned within it, the week plans set for its members, when each chore was finished, and the kudos and stickers members give on those chores. Families have no typed chat. A reaction is one of a fixed set of kudos and stickers, so nothing you type is sent to your family. If you used the family chat before it was removed, the messages you sent then are still stored, as described under <a href="#retention">How long we keep it</a>.</li>
+  <li><strong>Reports and blocks</strong>: if you report a player, we keep the report (who reported what, the reason you chose, when, and a copy of any message reported) so we can review it. If you block someone, we keep the block so it can be enforced.</li>
+  <li><strong>Plants</strong>: if you use Plants, each plant you add (the species you pick from our list, the nickname you give it, and the room it is in), how often it needs water, when it was last watered and by which player, and whether you want plant reminders. We do not take or store photos of your plants.</li>
+  <li><strong>Time zone and reminder timing</strong>: your device's time zone, so days, streaks and reminders follow your local time, and the time of day you usually finish chores, which we work out from when you finish them so reminders arrive when they are useful.</li>
+  <li><strong>Notifications</strong>: if you allow notifications, a push token so reminders can reach your device, and which reminders you have turned on.</li>
+  <li><strong>Purchase history</strong>: records of in-app purchases and subscriptions. Payment card details are handled entirely by Apple and are never seen by us.</li>
+  <li><strong>App integrity and server logs</strong>: when the app talks to our servers, Apple's App Attest and Google's Firebase App Check confirm that the request comes from a genuine copy of the app. Our servers record each request in logs that include your user ID and, as with any internet service, the network address it came from.</li>
+  <li><strong>Crash and error reports</strong>: if the app crashes, or an operation fails or runs unusually slowly, a diagnostic report is sent to Google's Firebase Crashlytics so the fault can be found and fixed. The report contains the error, the point in the code it happened, how long the operation took, the device model and the OS version, and a short trail of what you had just done in the app (for example <code>builder.opened</code>), recorded as plain event names with no details attached. Crash reports are <strong>not linked to your account</strong>: they identify an installation of the app, not you. They are not used for advertising, are never combined with data from anywhere else, and are not shared with anyone but Google, acting for us.</li>
 </ul>
-<p>We do not collect precise location, contacts, health, biometric or demographic data. If you take an optional photo of a room you have cleaned, it stays on your device and is never uploaded. Your password is handled by Firebase Authentication when you sign in; we do not store it and cannot see it.</p>
+<p>We do not collect precise location, contacts, health, biometric or demographic data. If you take an optional photo of a room you have cleaned, it is saved inside the app on your device and is never uploaded to us. Like other app data, it is included in your device's own backups, such as iCloud Backup. Deleting your account does not remove these photos from your device; deleting the app does. Your password is handled by Firebase Authentication; we do not store it and cannot see it.</p>
 
 <h2>Why we use it, and our lawful basis</h2>
 <p>If you are in the UK or the European Economic Area, the UK GDPR and the EU GDPR require us to tell you the lawful basis for each use. They are:</p>
 <table>
   <tr><th>What</th><th>Why we use it</th><th>Lawful basis</th></tr>
-  <tr><td>Account details, profile information, game data</td><td>To create your account, save your progress, and let you play with friends you have accepted</td><td><strong>Performance of a contract</strong> — this is the service you signed up for</td></tr>
+  <tr><td>Account details, profile information, game data, household tools</td><td>To create your account, save your progress, run the features you use, and let you play with friends you have accepted</td><td><strong>Performance of a contract</strong>: this is the service you signed up for</td></tr>
   <tr><td>Family and household data</td><td>To show your family's chores, week plans, kudos and stickers to its members</td><td><strong>Performance of a contract</strong></td></tr>
-  <tr><td>Reports and blocks</td><td>To review reports of abuse, enforce blocks and keep other players safe</td><td><strong>Legitimate interests</strong> — keeping the community safe, which App Store rules also require</td></tr>
-  <tr><td>Year of birth (not stored)</td><td>To confirm you are old enough to create an account</td><td><strong>Legitimate interests</strong> and our legal obligations towards children</td></tr>
+  <tr><td>Reports and blocks</td><td>To review reports of abuse, enforce blocks and keep other players safe</td><td><strong>Legitimate interests</strong>: keeping the community safe, which App Store rules also require</td></tr>
+  <tr><td>Year of birth (not stored) and the note that the check was passed</td><td>To confirm you are old enough to create an account</td><td><strong>Legitimate interests</strong> and our legal obligations towards children</td></tr>
   <tr><td>Purchase history</td><td>To give you what you bought and to keep subscriptions working across your devices</td><td><strong>Performance of a contract</strong></td></tr>
   <tr><td>Plants</td><td>To show your plants, work out when each one needs water, and share the plants you choose with your family</td><td><strong>Performance of a contract</strong></td></tr>
-  <tr><td>Device token</td><td>To send the reminders you asked for</td><td><strong>Consent</strong> — you choose this at the notification prompt, and can withdraw it at any time in iOS Settings</td></tr>
-  <tr><td>Crash reports</td><td>To find and fix faults that make the app break</td><td><strong>Legitimate interests</strong> — keeping the app working for everyone. Crash reports are not linked to your account</td></tr>
+  <tr><td>Time zone and reminder timing</td><td>To count your days and streaks in your local time and send reminders at a useful hour</td><td><strong>Performance of a contract</strong></td></tr>
+  <tr><td>Push token and reminder settings</td><td>To send the reminders you asked for</td><td><strong>Consent</strong>: you choose this at the notification prompt, and can withdraw it at any time in iOS Settings</td></tr>
+  <tr><td>App integrity checks and server logs</td><td>To keep accounts and the in-game economy safe from bots, cheating and abuse, and to find faults</td><td><strong>Legitimate interests</strong>: keeping the service secure and fair</td></tr>
+  <tr><td>Crash and error reports</td><td>To find and fix faults that make the app break</td><td><strong>Legitimate interests</strong>: keeping the app working for everyone. Crash reports are not linked to your account</td></tr>
 </table>
 <p>Providing your account details is a contractual requirement: without an email address and a user ID we cannot create an account, and you would not be able to save progress or use friend features. Nothing in the app requires you to give us data by law.</p>
 
 <h2>What we do not do</h2>
 <ul>
   <li>We do not sell your personal data.</li>
-  <li>We do not use your data for third-party advertising or tracking across other apps and websites.</li>
-  <li>We do not collect your location, contacts, photos, or health data.</li>
+  <li>We do not use your data for advertising, and we do not track you across other companies' apps and websites.</li>
+  <li>We do not collect your location, contacts, or health data, and we do not upload your photos.</li>
 </ul>
+<p><strong>Do Not Track.</strong> Because we do not track you across other sites or services, and do not allow anyone else to, the app and the website work the same way whether or not your browser or device sends a Do Not Track or Global Privacy Control signal.</p>
 
 <h2>Automated decisions</h2>
-<p>We do not use your data to make automated decisions about you, and we do not build advertising or marketing profiles from it. Nothing in the app decides anything about you without a person involved, and no feature currently analyses your history to make inferences about you. If that ever changes, this policy will be updated before the feature is switched on.</p>
+<p>We do not make decisions about you that have legal or similarly significant effects by automated means alone, and we do not build advertising or marketing profiles. Some checks run automatically to keep the game fair and safe: the word filter on family names, limits on how often an action can be repeated, and checks that a request comes from a genuine copy of the app. If one of these stops you doing something and you think it is wrong, email us and a person will look at it. The only thing we work out from your activity is the time of day you usually finish chores, and we use it only to time your reminders. If that ever changes, this policy will be updated before the new feature is switched on.</p>
 
 <h2>Who can see your information</h2>
-<p>Your profile and house layout are visible only to friends you have accepted. Settings contains a <strong>Be discoverable</strong> toggle; turning it off makes your account unsearchable by display name.</p>
-<p>If you join a family, its members can see your display name and avatar, the chores assigned to you and when you finish them, and the kudos and stickers you give. People outside the family cannot.</p>
-<p><strong>Your plants are visible only to you</strong> until you share them. A plant you share with your family, and its watering history (who watered it and when), can be seen by every member of that family, any member can water it, and it can appear in their plant reminders. Leaving or being removed from a family brings the plants you shared back to your own list.</p>
-<p>You can <strong>report</strong> a player, and <strong>block</strong> a player, from inside the app. A blocked player can no longer send you a friend request or a gift, and no longer appears in your searches. If you block someone in your family, their activity is hidden from you. Reports are read by us and are not shown to the person you reported.</p>
-<p>Data is stored using Google Firebase (Authentication, Cloud Firestore, Cloud Functions, Cloud Messaging, and Crashlytics), which processes it on our behalf. Apple processes in-app purchases and, if you use it, Sign in with Apple.</p>
+<p><strong>Your display name, avatar and cleanliness score</strong> can be seen by your friends, by your family, and by players you have sent a friend request to or received one from. If you turn on <strong>Be discoverable</strong> (in <strong>Settings → More settings</strong>; it is off unless you turn it on), anyone signed in to Squeeeks can find them by searching your display name. Friends you have accepted can also see your profile and game progress, including whether you have a membership.</p>
+<p><strong>Your house layout</strong> can be seen by friends you have invited into your house, and by the members of your family.</p>
+<p>If you join a family, its members can also see the chores assigned to you and when you finish them, the week plan set for you, and the kudos and stickers you give. People outside the family cannot.</p>
+<p><strong>Your plants are visible only to you</strong> until you share them. A plant you share with your family, including its nickname and its room, and its watering history (who watered it and when), can be seen by every member of that family, any member can water it, and it can appear in their plant reminders. Leaving or being removed from a family brings the plants you shared back to your own list.</p>
+<p>You can <strong>report</strong> a player, and <strong>block</strong> a player, from inside the app. A blocked player can no longer send you a friend request or a gift, is removed from your friends, and no longer appears in your searches. If you block someone in your family, their activity is hidden from you. Reports are read by us and are not shown to the person you reported.</p>
+<p>Data is stored using Google Firebase (Authentication, Cloud Firestore, Cloud Functions, Cloud Messaging, App Check and Crashlytics), which processes it on our behalf. Apple processes in-app purchases, App Attest checks and, if you use it, Sign in with Apple.</p>
 
 <h2>Where your data is processed</h2>
 <p>Google processes Firebase data on servers in the United States. For users in the UK and the European Economic Area, that is a transfer outside your home country, and it needs a legal mechanism.</p>
 <p>Google states that it complies with the <strong>EU–U.S. and Swiss–U.S. Data Privacy Frameworks and the UK Extension</strong> to the EU–U.S. Data Privacy Framework, and additionally offers <strong>Standard Contractual Clauses</strong> through its Cloud Data Processing Addendum. Those are the mechanisms this transfer relies on.</p>
 <p>In the language of the GDPR and of California law, we are the <strong>controller</strong> (or <em>business</em>) and Google is our <strong>processor</strong> (or <em>service provider</em>). Google publishes this position itself at <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>.</p>
 
-<h2>How long we keep it</h2>
-<p>We do not set a fixed number of days. Instead:</p>
+<h2 id="retention">How long we keep it</h2>
+<p>We do not set a fixed number of days for most data. Instead:</p>
 <ul>
-  <li><strong>Your account, profile and game data</strong> are kept for as long as your account exists. When you delete your account, they are deleted with it.</li>
+  <li><strong>Your account, profile, game data and household tools</strong> are kept for as long as your account exists. When you delete your account, they are deleted with it, along with your friend connections, the gifts you sent and your push token.</li>
   <li><strong>Plants</strong> on your own list are deleted with your account. Plants you have shared with a family stay on that family's list, because the household still looks after them, until the family is disbanded. They are then deleted, as nobody remains to return them to.</li>
-  <li><strong>Family chores, kudos and stickers</strong> stay with the family while it exists. When you delete your account, the chores assigned to you are deleted.</li>
-  <li><strong>Reports</strong> are kept for as long as we need them to deal with the report and with any repeat behaviour by the same account.</li>
-  <li><strong>Purchase records</strong> are kept for as long as needed to honour an active entitlement or subscription, and to deal with refund and billing questions afterwards.</li>
+  <li><strong>Family data.</strong> Chores, kudos and stickers stay with the family while it exists. When you delete your account, the chores assigned to you, the week plan set for you, and any family chat messages you sent before the chat was removed are deleted. Kudos and stickers you gave on other members' chores stay with the family while it exists.</li>
+  <li><strong>Reports</strong> are kept for as long as we need them to deal with the report and with any repeat behaviour by the same account, including after the reported account is deleted. Blocks other players have placed on you stay in their accounts.</li>
+  <li><strong>Purchase records</strong> are kept for as long as needed to honour an active entitlement or subscription, and to deal with refund and billing questions afterwards. When you delete your account we keep the record of each purchase that was processed, and a minimal note that the account was deleted (its user ID and when), so that the same purchase cannot be claimed twice and a deleted account cannot be restored by mistake.</li>
+  <li><strong>Server logs</strong> are kept by Google for about 30 days and then deleted.</li>
   <li><strong>Crash reports</strong> are held by Google Crashlytics under Google's own retention schedule, not ours. They are not linked to your account and are deleted on Google's cycle.</li>
-  <li><strong>Backups.</strong> After deletion, residual copies may persist for a limited period in Google's backup systems before they age out. That schedule is Google's and we do not control it — we cannot promise a number we are not in a position to enforce.</li>
+  <li><strong>Backups.</strong> After deletion, residual copies may persist for a limited period in Google's backup systems before they age out. That schedule is Google's and we do not control it, so we cannot promise a number we are not in a position to enforce.</li>
 </ul>
 
 <h2>Your rights</h2>
 <p>Wherever you live, you can ask us to do the following, and we will not treat you any differently for asking:</p>
 <ul>
-  <li><strong>Access</strong> — get a copy of the personal data we hold about you.</li>
-  <li><strong>Rectification</strong> — have anything inaccurate corrected. You can change your avatar yourself in <strong>Settings</strong>; email us for anything else.</li>
-  <li><strong>Erasure</strong> — delete your account and its data. You can do this yourself at any time from <strong>Settings → Account &amp; Data → Delete account</strong>. Deletion removes your account and associated game data and cannot be undone.</li>
-  <li><strong>Portability</strong> — receive the data you gave us in a machine-readable form, or ask us to send it elsewhere. The app has no export button today, so email us and we will put the file together by hand.</li>
-  <li><strong>Restriction</strong> — ask us to pause what we do with your data while a question about it is being sorted out.</li>
-  <li><strong>Objection</strong> — object to our processing where we rely on legitimate interests, which for us means crash reporting.</li>
-  <li><strong>Withdraw consent</strong> — turn off notifications at any time in iOS Settings. Withdrawing does not affect anything done before you withdrew.</li>
+  <li><strong>Access</strong>: get a copy of the personal data we hold about you.</li>
+  <li><strong>Rectification</strong>: have anything inaccurate corrected. You can change your avatar yourself in <strong>Settings</strong>; email us for anything else.</li>
+  <li><strong>Erasure</strong>: delete your account and its data. You can do this yourself at any time from <strong>Settings → More settings → Delete account</strong>. Deletion removes your account and associated game data and cannot be undone. If you signed in with Apple, deleting your account also withdraws the app's access to your Apple ID.</li>
+  <li><strong>Portability</strong>: receive the data you gave us in a machine-readable form, or ask us to send it elsewhere. The app has no export button today, so email us and we will put the file together by hand.</li>
+  <li><strong>Restriction</strong>: ask us to pause what we do with your data while a question about it is being sorted out.</li>
+  <li><strong>Objection</strong>: object to our processing where we rely on legitimate interests: safety reports, app integrity checks, server logs and crash reporting.</li>
+  <li><strong>Withdraw consent</strong>: turn off notifications at any time in iOS Settings. Withdrawing does not affect anything done before you withdrew.</li>
 </ul>
-<p>Email <a href="mailto:bkbrohon795@gmail.com">bkbrohon795@gmail.com</a> to exercise any of these. We may need to confirm you control the account's email address before we act, so that nobody else can make a request about your data.</p>
+<p>Email <a href="mailto:bkbrohon795@gmail.com">bkbrohon795@gmail.com</a> to exercise any of these. We may need to confirm you control the account's email address before we act, so that nobody else can make a request about your data. We will reply within one month. If a request is complex, we may need up to two more months, and we will tell you within the first month if so.</p>
 <p>If you are in the UK or the EEA and you think we have got this wrong, you have the right to <strong>complain to your data protection supervisory authority</strong>. In the UK that is the Information Commissioner's Office (<a href="https://ico.org.uk">ico.org.uk</a>); in the EEA it is the authority in the country where you live. You can complain without contacting us first, though we would rather have the chance to fix it.</p>
 
 <h2>If you are in California</h2>
-<p>The CCPA and CPRA give California residents specific rights and require us to describe our collection in the statute's own categories. In the last 12 months we have collected:</p>
+<p>California law gives residents specific privacy rights and asks businesses to describe their collection in the statute's own categories. We give California residents the rights below whether or not those laws apply to a service of our size. In the last 12 months we have collected:</p>
 <table>
-  <tr><th>CCPA category</th><th>What that means here</th><th>Business purpose</th></tr>
-  <tr><td><strong>Identifiers</strong></td><td>Email address, user ID, display name, device push token</td><td>Creating and securing your account; sending reminders you asked for</td></tr>
+  <tr><th>Category</th><th>What that means here</th><th>Business purpose</th></tr>
+  <tr><td><strong>Identifiers</strong></td><td>Email address, user ID, display name, device push token, network address in server logs</td><td>Creating and securing your account; sending reminders you asked for</td></tr>
   <tr><td><strong>Commercial information</strong></td><td>Records of in-app purchases and subscriptions</td><td>Delivering what you bought; supporting refunds and billing questions</td></tr>
-  <tr><td><strong>Internet or other electronic network activity information</strong></td><td>Crash diagnostics: the error, device model, OS version, and recent in-app event names</td><td>Finding and fixing faults</td></tr>
-  <tr><td><strong>Other information you create in the app</strong></td><td>Tasks, streaks, house layout, in-game currency, friend connections, family chores, kudos and stickers, reports you make</td><td>Running the game, saving your progress, showing your family's chores to its members, keeping players safe</td></tr>
+  <tr><td><strong>Internet or other electronic network activity information</strong></td><td>App integrity checks and server logs; crash and error diagnostics (the error, device model, OS version, timings and recent in-app event names)</td><td>Security, preventing cheating, and finding and fixing faults</td></tr>
+  <tr><td><strong>Inferences</strong></td><td>The time of day you usually finish chores</td><td>Timing your reminders</td></tr>
+  <tr><td><strong>Other information you create in the app</strong></td><td>Tasks, streaks, house layout, in-game currency, friend connections, household tools, plants, family chores, week plans, kudos and stickers, time zone, reports you make</td><td>Running the game, saving your progress, showing your family's chores to its members, keeping players safe</td></tr>
 </table>
-<p>We disclose these categories to two kinds of third party for those business purposes: <strong>Google</strong> (Firebase Authentication, Cloud Firestore, Cloud Functions, Cloud Messaging and Crashlytics) and <strong>Apple</strong> (in-app purchases and Sign in with Apple). Both act as service providers.</p>
-<p>We <strong>do not sell</strong> your personal information and we <strong>do not share</strong> it for cross-context behavioural advertising, as those terms are defined by California law. We never have. Because we do not sell or share, there is nothing for you to opt out of — but the rest of your rights still apply: the right to <strong>know</strong> what we collect, to <strong>delete</strong> it, to <strong>correct</strong> it, and to <strong>not be discriminated against</strong> for exercising any of them. We do not offer financial incentives in exchange for personal information.</p>
-<p>We do not hold the content of private messages: families have no typed chat. We do not collect precise geolocation, government identifiers, racial or ethnic origin, religious beliefs, health data or biometrics. We do not use or disclose sensitive personal information for any purpose that would require a right-to-limit notice.</p>
+<p>We collect this information from you and from your device as you use the app, and, for Sign in with Apple and purchases, from Apple. We keep each category for the periods described under <a href="#retention">How long we keep it</a>.</p>
+<p>We disclose these categories to two kinds of third party for those business purposes: <strong>Google</strong> (Firebase Authentication, Cloud Firestore, Cloud Functions, Cloud Messaging, App Check and Crashlytics) and <strong>Apple</strong> (in-app purchases, App Attest and Sign in with Apple). Both act as service providers.</p>
+<p>We <strong>do not sell</strong> your personal information and we <strong>do not share</strong> it for cross-context behavioural advertising, as those terms are defined by California law. We never have. Because we do not sell or share, there is nothing for you to opt out of, but the rest of your rights still apply: the right to <strong>know</strong> what we collect, to <strong>delete</strong> it, to <strong>correct</strong> it, and to <strong>not be discriminated against</strong> for exercising any of them. We do not offer financial incentives in exchange for personal information. We will respond to these requests within 45 days.</p>
+<p>Families have no typed chat. We do not collect precise geolocation, government identifiers, racial or ethnic origin, religious beliefs, health data or biometrics. Your email address and password are used only to sign you in, and we do not use or disclose sensitive personal information for any purpose that would require a right-to-limit notice.</p>
 <p>You can make any of these requests at <a href="mailto:bkbrohon795@gmail.com">bkbrohon795@gmail.com</a>. An authorised agent may make a request on your behalf, and we will ask for proof that you authorised them.</p>
 
 <h2>How we protect your data</h2>
@@ -140,6 +150,7 @@
 <ul>
   <li>Access to your data is controlled by <strong>server-side security rules</strong>, so what your device is allowed to read and write is enforced on the server rather than trusted from the app.</li>
   <li>Accounts are <strong>authenticated through Firebase Authentication</strong>. We never see or store your password.</li>
+  <li>Requests are checked with <strong>App Attest and Firebase App Check</strong>, and limited in how often they can be repeated, to keep bots and modified apps out.</li>
   <li>All traffic between the app and our services runs over <strong>encrypted connections (TLS)</strong>.</li>
   <li><strong>No card data ever reaches us.</strong> Apple handles payment entirely.</li>
   <li>Storage and infrastructure security is Google's, under the Firebase terms.</li>
@@ -149,9 +160,10 @@
 <h2>If something goes wrong</h2>
 <p>If a breach of personal data happens and it is likely to be a risk to your rights and freedoms, we will report it to the relevant supervisory authority <strong>without undue delay, and within 72 hours of becoming aware of it</strong> where the GDPR requires that. If the risk to you is high, we will tell you directly as well, without undue delay. Where other laws set their own notification duties, we will follow those too.</p>
 
-<h2>Children</h2>
+<h2>Children and teenagers</h2>
 <p>Squeeeks is for people <strong>aged 13 and over</strong>. It is not an App Store Kids Category app and it is not directed at children under 13. When you create an account, the app asks for your year of birth and does not let you continue if you are under 13. We do not store the year you enter or your age.</p>
-<p>We do not knowingly collect personal information from children under 13. If we learn that an account belongs to a child under 13, we will delete it and its data. If you are a parent or guardian and think your child has an account, email us at the address below and we will delete it. Anyone can also delete an account and all of its data at any time from <strong>Settings → Account &amp; Data → Delete account</strong>.</p>
+<p>We do not knowingly collect personal information from children under 13. A family's members must each have their own account, so a child under 13 cannot be added to a family. If we learn that an account belongs to a child under 13, we will delete it and its data. If you are a parent or guardian and think your child has an account, email us at the address below and we will delete it. Anyone can also delete an account and all of its data at any time from <strong>Settings → More settings → Delete account</strong>.</p>
+<p>For players aged 13 to 17, we collect only what the game needs to work, we never use their data for advertising or sell it, and <strong>Be discoverable</strong> is off unless they turn it on. A parent or guardian can ask us for a copy of their teenager's data, or for it to be deleted, by emailing us from the account's email address or with proof that they are the parent or guardian.</p>
 
 <h2 id="website">The squeeeks.app website and early-access list</h2>
 <p>The website at squeeeks.app has a short quiz and an early-access list for the iPhone beta. You can take the quiz without giving us anything: your answers stay in your browser unless you choose to join the list.</p>
@@ -159,10 +171,10 @@
 <ul>
   <li><strong>Your email address</strong>, if you join the list.</li>
   <li><strong>Your quiz answers</strong>, and the words you type in the optional box, <strong>only if you join</strong>. If you don't join, they never leave your browser.</li>
-  <li><strong>Where you came from</strong> — a short tag in the link you followed (<code>src</code>, for example <code>tt</code> for TikTok).</li>
-  <li><strong>Timestamps</strong> — when you signed up, when you confirmed your email, and when we emailed you.</li>
+  <li><strong>Where you came from</strong>: a short tag in the link you followed (<code>src</code>, for example <code>tt</code> for TikTok).</li>
+  <li><strong>Timestamps</strong>: when you signed up, when you confirmed your email, and when we emailed you.</li>
   <li><strong>A keyed hash of your IP address</strong>, never the address itself, when you submit the form. It is used only to limit sign-up attempts to five an hour, and we delete these hashes once they are more than 24 hours old: the clean-up runs every time someone signs up.</li>
-  <li><strong>Anonymous quiz step counts</strong> — for each day, how many visitors reached each step of the quiz. They carry no identifier at all: no IP address, no cookie and no ID, so they cannot be linked to you.</li>
+  <li><strong>Anonymous quiz step counts</strong>: for each day, how many visitors reached each step of the quiz. They carry no identifier at all (no IP address, no cookie and no ID), so they cannot be linked to you.</li>
 </ul>
 <p><strong>Why.</strong> To send your confirmation email, your beta invite and news about the launch, and to decide what to build: your answers tell us which problems matter most to the people waiting. In GDPR terms the email list rests on your <strong>consent</strong>, which you give by confirming your address and can withdraw at any time with the unsubscribe link. The IP hash rests on our <strong>legitimate interests</strong> in stopping abuse of the form. The step counts are not personal data.</p>
 <p><strong>Who processes it.</strong> <strong>Cloudflare</strong> hosts the website and its database, and runs the Turnstile check that tells people from bots before you can join. <strong>Resend</strong> delivers our emails. Both act for us as processors (service providers, under California law), and both are based in the United States, so your data may be processed there.</p>
@@ -170,12 +182,12 @@
 <p><strong>What we never do.</strong> We never sell it, never share it for advertising, and never use it to make decisions about you.</p>
 
 <h2>Changes</h2>
-<p>If this policy changes materially, the updated version will be posted on this page with a new date.</p>
+<p>If this policy changes materially, we will tell you in the app or by email before the change takes effect, and post the updated version on this page with a new date. Smaller changes, such as fixing wording, are posted here with a new date.</p>
 
 <h2>Contact</h2>
 <p>Questions or deletion requests: <a href="mailto:bkbrohon795@gmail.com">bkbrohon795@gmail.com</a></p>
 
-<footer><a href="./">Home</a> · <a href="terms.html">Terms of Service</a></footer>
+<footer><a href="./">Home</a> · <a href="terms.html">Terms of Service</a> · <a href="support.html">Support</a></footer>
 
 </body>
 </html>
