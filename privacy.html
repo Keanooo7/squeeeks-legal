@@ -28,10 +28,9 @@
 <p class="meta">Squeeeks · Last updated 21 October 2026 · Effective 21 October 2026</p>
 
 <!-- Published 21 October 2026 on Brendan's ruling that the app uses the sticker-only family terms
-     (the server already refuses typed family posts). Account deletion does not yet delete
-     families/{id}/weekPlans/{uid}, so "How long we keep it" says the plan stays until the family
-     is disbanded (disbandFamily recursive-deletes the family). When deleteAccount removes it,
-     say so there. The "Fonts" paragraph was removed for #893, which
+     (the server already refuses typed family posts). Week plans: deleteAccount, leaveFamily and
+     removeMember delete families/{id}/weekPlans/{uid} since Cleaning #992 (deployed 2026-10-21);
+     disbandFamily recursive-deletes the family. The "Fonts" paragraph was removed for #893, which
      bundles the fonts and turns runtime fetching off; restore it from git history if a build in
      players' hands does not contain #893. -->
 
@@ -107,7 +106,7 @@
 <ul>
   <li><strong>Your account, profile, game data and household tools</strong> are kept for as long as your account exists. When you delete your account, they are deleted with it, along with your friend connections, the gifts you sent and your push token.</li>
   <li><strong>Plants</strong> on your own list are deleted with your account. Plants you have shared with a family stay on that family's list, because the household still looks after them, until the family is disbanded. They are then deleted, as nobody remains to return them to.</li>
-  <li><strong>Family data.</strong> Chores, kudos and stickers stay with the family while it exists. When you delete your account, the chores assigned to you and any family chat messages you sent before the chat was removed are deleted. The week plan set for you stays with the family until the family is disbanded, and is then deleted. Kudos and stickers you gave on other members' chores stay with the family while it exists.</li>
+  <li><strong>Family data.</strong> Chores, kudos and stickers stay with the family while it exists. When you delete your account, the chores assigned to you, the week plan set for you, and any family chat messages you sent before the chat was removed are deleted. When you leave a family, or are removed from it, the week plan set for you is deleted. Kudos and stickers you gave on other members' chores stay with the family while it exists.</li>
   <li><strong>Reports</strong> are kept for as long as we need them to deal with the report and with any repeat behaviour by the same account, including after the reported account is deleted. Blocks other players have placed on you stay in their accounts.</li>
   <li><strong>Purchase records</strong> are kept for as long as needed to honour an active entitlement or subscription, and to deal with refund and billing questions afterwards. When you delete your account we keep the record of each purchase that was processed, and a minimal note that the account was deleted (its user ID and when), so that the same purchase cannot be claimed twice and a deleted account cannot be restored by mistake.</li>
   <li><strong>Server logs</strong> are kept by Google for about 30 days and then deleted.</li>
